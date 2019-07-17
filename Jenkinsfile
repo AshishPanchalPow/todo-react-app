@@ -1,7 +1,5 @@
 pipeline {
-    dir("C:\\Program Files (x86)\\Jenkins\\workspace\\react-app-2_master") {
-    sh "pwd"
-}
+    
     agent {
         docker {
             image 'node:6'
@@ -12,6 +10,13 @@ pipeline {
         CI = 'true'
     }
     stages {
+        stage('Init') {
+            teps {
+                dir("C:\\Program Files (x86)\\Jenkins\\workspace\\react-app-2_master") {
+                    sh 'pwd'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 sh 'npm install'
