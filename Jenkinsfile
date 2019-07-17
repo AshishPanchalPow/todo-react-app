@@ -1,4 +1,7 @@
 pipeline {
+    dir("C:\\Program Files (x86)\\Jenkins\\workspace\\react-app-2_master") {
+    sh "pwd"
+}
     agent {
         docker {
             image 'node:6'
