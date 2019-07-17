@@ -11,7 +11,7 @@ pipeline {
     }
     stages {
         stage('Init') {
-            teps {
+            steps {
                 dir("C:\\Program Files (x86)\\Jenkins\\workspace\\react-app-2_master") {
                     sh 'pwd'
                 }
